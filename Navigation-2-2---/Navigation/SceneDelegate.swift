@@ -22,7 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                let loginNavigation = tabController.viewControllers?.last as? UINavigationController,
                let loginController = loginNavigation.viewControllers.first as? LogInViewController {
                 
-                loginController.delegate = MyLoginFactory()
+                let myLogInFactory = MyLoginFactory()
+                
+                loginController.delegate = myLogInFactory.createInspector()
             }
         }
 

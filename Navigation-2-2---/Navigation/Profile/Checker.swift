@@ -15,4 +15,12 @@ class Checker {
     
     private(set) var login = "Baby Yoda".hash
     private(set) var password = "password".hash
+    
+    func check(emailOrPhone: String, password: String) -> Bool {
+        if emailOrPhone.hash == login && password.hash == self.password {
+            return true
+        }
+        
+        return false
+    }
 }
