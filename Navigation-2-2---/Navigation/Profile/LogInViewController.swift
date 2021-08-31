@@ -8,20 +8,9 @@
 
 import UIKit
 
-protocol LogInViewControllerDelegate {
-    
-    func check(_ controller: LogInViewController) -> Bool
-}
-
-protocol LogInFactory {
-    
-    func inspector() -> LogInInspector
-}
-
 class LogInViewController: UIViewController {
     
-    var delegate: LogInFactory?
-    private lazy var inspector: LogInInspector = delegate!.inspector()
+    var delegate: LogInViewControllerDelegate?
     
     private let logInButton: UIButton = {
        let button = UIButton()
@@ -60,7 +49,7 @@ class LogInViewController: UIViewController {
         return view
     }()
     
-    fileprivate let usersEmailOrPhone: UITextField = {
+    internal let usersEmailOrPhone: UITextField = {
        let emailOrPhone = UITextField()
         
         emailOrPhone.tintColor = #colorLiteral(red: 0.3675304651, green: 0.5806378722, blue: 0.7843242884, alpha: 1)
@@ -82,7 +71,7 @@ class LogInViewController: UIViewController {
         return emailOrPhone
     }()
     
-    fileprivate let usersPassword: UITextField = {
+    internal let usersPassword: UITextField = {
        let password = UITextField()
         
         password.tintColor = #colorLiteral(red: 0.3675304651, green: 0.5806378722, blue: 0.7843242884, alpha: 1)
@@ -210,9 +199,11 @@ class LogInViewController: UIViewController {
     
     @objc fileprivate func tapButton() {
         
-        if inspector.check(self) == true {
+        if delegate?.inspect(emailOrPhone: usersEmailOrPhone.text!,
+                             password: usersPassword.text!) == true {
             navigationController?.pushViewController(ProfileViewController(), animated: true)
         } else {
+            
             let alertController = UIAlertController(title: "Неправильно введен логин или пароль",
                                         message: "Попробуйте ввести заново",
                                         preferredStyle: .alert)
@@ -225,18 +216,4 @@ class LogInViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
     }
-}
-
-class LogInInspector: LogInViewControllerDelegate {
-    func check(_ controller: LogInViewController) -> Bool {
-       
-        guard controller.usersEmailOrPhone.text?.hash == Checker.checker.login &&
-            controller.usersPassword.text?.hash == Checker.checker.password else { return false }
-        
-        return true
-    }
-}
-
-class MyLoginFactory: LogInFactory {
-    func inspector() -> LogInInspector { LogInInspector() }
 }

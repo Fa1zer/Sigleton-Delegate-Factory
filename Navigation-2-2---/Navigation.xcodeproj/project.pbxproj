@@ -28,6 +28,8 @@
 		E369E05126B069E3002EA616 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E369E05026B069E3002EA616 /* PhotosViewController.swift */; };
 		E369E05326B19366002EA616 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E369E05226B19366002EA616 /* PhotosCollectionViewCell.swift */; };
 		E38FDB4426A5F3C100F274C6 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38FDB4326A5F3C000F274C6 /* PostTableViewCell.swift */; };
+		E3AF9DCA26DE452200665FFC /* LogInFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AF9DC926DE452200665FFC /* LogInFactory.swift */; };
+		E3AF9DCC26DE454000665FFC /* LogInInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AF9DCB26DE454000665FFC /* LogInInspector.swift */; };
 		E3BC1FB92695E73A0075EB4B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC1FB82695E73A0075EB4B /* LogInViewController.swift */; };
 		E3BC834926D39ADB00061E45 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC834826D39ADB00061E45 /* Checker.swift */; };
 		E3FE37BA26D02CD3008D83AB /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E3FE37B926D02CD3008D83AB /* iOSIntPackage */; };
@@ -84,6 +86,8 @@
 		E369E05026B069E3002EA616 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		E369E05226B19366002EA616 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		E38FDB4326A5F3C000F274C6 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		E3AF9DC926DE452200665FFC /* LogInFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInFactory.swift; sourceTree = "<group>"; };
+		E3AF9DCB26DE454000665FFC /* LogInInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInspector.swift; sourceTree = "<group>"; };
 		E3BC1FB82695E73A0075EB4B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E3BC834826D39ADB00061E45 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		F18A1AC026FB924631232AA6 /* Pods_StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,8 @@
 				E32C7E9C2663DEDA00C3014E /* ProfileHeaderView.swift */,
 				E32C7E9E2663DEF200C3014E /* ProfileViewController.swift */,
 				E3BC1FB82695E73A0075EB4B /* LogInViewController.swift */,
+				E3AF9DC926DE452200665FFC /* LogInFactory.swift */,
+				E3AF9DCB26DE454000665FFC /* LogInInspector.swift */,
 				E38FDB4326A5F3C000F274C6 /* PostTableViewCell.swift */,
 				E369E05026B069E3002EA616 /* PhotosViewController.swift */,
 				E318365526AEBC0E0067668E /* PhotosTableViewCell.swift */,
@@ -382,6 +388,7 @@
 			files = (
 				060782B6250CE27700A87020 /* FeedViewController.swift in Sources */,
 				060782B2250CE27700A87020 /* AppDelegate.swift in Sources */,
+				E3AF9DCA26DE452200665FFC /* LogInFactory.swift in Sources */,
 				060782C6250CEB0A00A87020 /* InfoViewController.swift in Sources */,
 				E318365626AEBC0E0067668E /* PhotosTableViewCell.swift in Sources */,
 				E369E05326B19366002EA616 /* PhotosCollectionViewCell.swift in Sources */,
@@ -394,6 +401,7 @@
 				E369E05126B069E3002EA616 /* PhotosViewController.swift in Sources */,
 				E3BC1FB92695E73A0075EB4B /* LogInViewController.swift in Sources */,
 				060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */,
+				E3AF9DCC26DE454000665FFC /* LogInInspector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
